@@ -8,7 +8,9 @@ function App() {
   return (
     <div>
       <button disabled={disabled} onClick={() => setCurrentColor(nextColor)} style={{background: currentColor}}>Change to {nextColor}</button>
-      <input checked={disabled} type="checkbox" onChange={e => setDisabled(e.target.checked)}/>
+      <label htmlFor="disable-button-checkbox">
+        Disable button
+        <input id='disable-button-checkbox' checked={disabled} type="checkbox" onChange={e => setDisabled(e.target.checked)}/></label>
     </div>
   )
 }
